@@ -1,0 +1,40 @@
+header {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em auto;
+
+    img {
+        width: 145px;
+        height: 34.05px;
+    }
+
+    #search-bar {
+        @include input-pattern;
+        width: 55%;
+        height: 100%;
+
+        &::placeholder {
+            @include input-placeholder-text;
+        }
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 2em;
+            width: 2em;
+            border-radius: 100%;
+        }
+
+        small {
+            color: white;
+            padding: 0 .5em;
+            font-size: 1em;
+        }
+    }
+}

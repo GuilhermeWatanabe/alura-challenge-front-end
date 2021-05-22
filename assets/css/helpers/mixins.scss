@@ -1,0 +1,22 @@
+@mixin input-pattern {
+    background: rgba(255, 255, 255, 0.16);
+    border: none;
+    border-radius: $pattern-radius;
+    padding: 1em;
+    box-sizing: border-box;
+    color: white;
+}
+
+@mixin input-placeholder-text {
+    color: white;
+    opacity: .64;
+}
+
+@mixin titles {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: .8em;
+}

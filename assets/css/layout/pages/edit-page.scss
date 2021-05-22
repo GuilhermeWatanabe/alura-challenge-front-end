@@ -1,0 +1,39 @@
+.about-projects {
+    float: right;
+    width: 20%;
+
+    .new-project {
+        padding: 0 0 2em;
+        width: 100%;
+    
+        p {
+            @include titles;
+        }
+    
+        input, textarea {
+            @include input-pattern;
+            width: 100%;
+            margin-top: 1em;
+            box-sizing: border-box;
+    
+            &::placeholder {
+                @include input-placeholder-text;
+            }
+        }
+    
+        textarea{
+            resize: none;
+            height: 80px;
+        }
+    }
+
+    .personalization {
+        padding: 0 0 2em;
+        width: 100%;
+
+        p {
+            @include titles;
+        }
+    }
+}
+
