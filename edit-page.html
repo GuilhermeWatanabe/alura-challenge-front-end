@@ -3,39 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Editar Código</title>
+    <title>Editor de Código</title>
 </head>
 <body>
+    <header>
+        <img src="assets/images/logo.png" alt="Logo AluraDev" />
+        <input type="text" name="" id="search-bar" placeholder="Busque por algo">
+        <div>
+            <img src="assets/images/user.jpeg" alt="Foto do usuário">
+            <small>Guilherme</small>
+        </div>
+    </header>
     <main>
-        <header>
-            <img src="assets/images/logo.png" alt="Logo AluraDev" />
-            <input type="text" name="" id="search-bar" placeholder="Busque por algo">
-            <div>
-                <img src="assets/images/user.jpeg" alt="Foto do usuário">
-                <small>Guilherme</small>
-            </div>
-        </header>
         <nav>
-
+            <h4>Menu</h4>
+            <ul>
+                <li>
+                    <a href="edit-page.html">
+                        <div class="first-icon">
+                            <img src="assets/images/menu-icon1.png" alt="Icone do menu para a página de edição de código">
+                        </div>
+                        Editor de código
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="second-icon">
+                            <img src="assets/images/menu-icon2.png" alt="Icone do menu para a página de comunidade">
+                        </div>
+                        Comunidade
+                    </a>
+                </li>
+            </ul>
         </nav>
-        <aside>
-
-
-        </aside>
-        <section class="about-projects">
+        <section class="code">
+            <div class="code-editor">
+                <ul class="dots">
+                    <li class="red"></li>
+                    <li class="yellow"></li>
+                    <li class="green"></li>
+                </ul>
+                <textarea name="" id=""></textarea>
+             </div>
+            <button class="highlight-button">Visualizar com o highlight</button>            
+        </section>
+        <aside class="about-projects">
             <div class="new-project">
-                <p>Seu projeto</p>
+                <h4>Seu projeto</h4>
                 <input type="text" name="" id="" placeholder="Nome do seu projeto">
                 <textarea name="" id="" placeholder="Descrição do seu projeto"></textarea>
             </div>
             <div class="personalization">
-                <p>Personalização</p>
+                <h4>Personalização</h4>
                 <select name="" id="">
                     <option value="">JavaScript</option>
+                    <option value="">HTML</option>
+                    <option value="">CSS</option>
                 </select>
                 <input type="color" name="" id="">
             </div>
-        </section>
-    </div>
+            <button>Salvar projeto</button>
+        </aside>
+    </main>
 </body>
 </html>

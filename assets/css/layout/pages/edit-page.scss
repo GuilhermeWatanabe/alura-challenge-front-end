@@ -1,12 +1,82 @@
+.code {
+    width: 55%;
+
+    .code-editor {
+        padding: 2em;
+        background-color: #6BD1FF;
+        border: none;
+        border-radius: 8px;
+        box-sizing: border-box;
+        width: 100%;
+    
+        .dots {
+            background-color: black;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 1em;
+            border-radius: $pattern-radius $pattern-radius 0 0;
+    
+            .red, .yellow, .green {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                display: inline-block;
+                margin-right: 3px;
+            }
+    
+            .red {
+                background-color: #FF5F56;
+            }
+    
+            .yellow {
+                background-color: #FFBD2E;
+            }
+    
+            .green {
+                background-color: #27C93F;
+            }
+        }
+    
+        textarea {
+            width: 100%;
+            resize: none;
+            height: 250px;
+            background-color: black;
+            color: white;
+            font-size: .9em;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border: none;
+            box-sizing: border-box;
+            padding: 1em;
+            box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
+            border-radius: 0 0 $pattern-radius $pattern-radius;
+        }
+    
+    }
+
+    .highlight-button {
+        width: 100px;
+        background: rgba(80, 129, 251, 0.08);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        margin-top: 1em;
+        width: 100%;
+        padding: 1em 0;
+    }
+}
+
+
 .about-projects {
-    float: right;
     width: 20%;
 
     .new-project {
         padding: 0 0 2em;
         width: 100%;
     
-        p {
+        h4 {
             @include titles;
         }
     
@@ -31,9 +101,41 @@
         padding: 0 0 2em;
         width: 100%;
 
-        p {
+        h4 {
             @include titles;
         }
+
+        select, input {
+            margin-top: 1em;
+        }
+
+        select {
+            @include input-pattern;
+            color: rgba($color: white, $alpha: .64);
+            width: 100%;
+
+            option {
+                background-color: black;
+            }
+        }
+
+        input {
+            width: 100%;
+            border-radius: 4px;
+            border: 1px white solid;
+            background-color: #051D3B;
+            height: 40px;
+            box-sizing: border-box;
+        }
+    }
+
+    button {
+        width: 100%;
+        color: #051D3B;
+        height: 50px;
+        background-color: #5081FB;
+        border: none;
+        border-radius: 8px;
+        box-sizing: border-box;
     }
 }
-
