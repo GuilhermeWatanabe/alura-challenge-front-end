@@ -1,10 +1,32 @@
-@mixin input-pattern {
-    background: rgba(255, 255, 255, 0.16);
+/* background colors */
+%background-light-malibu {background-color: #96B9FD;}
+%background-malibu {background-color: #7BA4FC;}
+%background-dodger-blue {background-color: #5081FB;}
+%background-deep-cove {background-color: #051D3B;}
+%background-code-editor {background-color: #141414;}
+
+/* fonts */
+%font-inter {font-family: 'Inter', sans-serif;}
+
+/* shadows */
+%pattern-shadow {box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24)};
+
+%pattern-border-radius {border-radius: 8px;}
+
+/* functions */
+@function calculateREM($size) {
+    //converts the given size in pixels to REM size
+    @return $size / 16px * 1rem;
+}
+
+/* mixins */
+@mixin pattern-input {
+    background-color: rgba($color: white, $alpha: .16);
     border: none;
-    border-radius: $pattern-radius;
-    padding: 1em;
+    padding: 1rem;
     box-sizing: border-box;
     color: white;
+    @extend %pattern-border-radius;
 }
 
 @mixin input-placeholder-text {
@@ -12,11 +34,29 @@
     opacity: .64;
 }
 
-@mixin titles {
+@mixin sidebar-title {
+    @include fontSize(12px);
     color: white;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: calculateREM(4px);
     margin-block-start: 0;
     margin-block-end: 0;
-    font-size: .8em;
+    line-height: calculateREM(18px);
+    @extend %font-inter;
+}
+
+@mixin pattern-button {
+    width: 100%;
+    border: none;
+    padding: 1rem 0;
+    @extend %pattern-border-radius;
+}
+
+@mixin project-title {
+    @include fontSize(21px);
+    line-height: calculateREM(32px);
+}
+
+@mixin fontSize($size) {
+    font-size: calculateREM($size);
 }

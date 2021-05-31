@@ -1,141 +1,130 @@
 .code {
     width: 55%;
 
-    .code-editor {
-        padding: 2em;
+    &__editor {
+        padding: 2rem;
         background-color: #6BD1FF;
         border: none;
-        border-radius: 8px;
         box-sizing: border-box;
         width: 100%;
+        @extend %pattern-border-radius;
+    }
     
-        .dots {
-            background-color: black;
-            margin-block-start: 0;
-            margin-block-end: 0;
-            width: 100%;
-            box-sizing: border-box;
-            padding: 1em;
-            border-radius: $pattern-radius $pattern-radius 0 0;
-    
-            .red, .yellow, .green {
-                width: 12px;
-                height: 12px;
-                border-radius: 50%;
-                display: inline-block;
-                margin-right: 3px;
-            }
-    
-            .red {
+    &__dots {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1rem;
+        border-radius: $pattern-radius $pattern-radius 0 0;
+        @extend %background-code-editor;
+        
+        li {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 3px;
+
+            &:nth-child(1) {
                 background-color: #FF5F56;
             }
-    
-            .yellow {
+
+            &:nth-child(2) {
                 background-color: #FFBD2E;
             }
-    
-            .green {
+
+            &:nth-child(3) {
                 background-color: #27C93F;
             }
         }
-    
-        textarea {
-            width: 100%;
-            resize: none;
-            height: 250px;
-            background-color: black;
-            color: white;
-            font-size: .9em;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            border: none;
-            box-sizing: border-box;
-            padding: 1em;
-            box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
-            border-radius: 0 0 $pattern-radius $pattern-radius;
-        }
-    
     }
+    
+    &__text {
+        width: 100%;
+        resize: none;
+        height: 250px;
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        border: none;
+        box-sizing: border-box;
+        padding: 1rem;
+        border-radius: 0 0 $pattern-radius $pattern-radius;
+        @extend %pattern-shadow;
+        @extend %background-code-editor;
+    }
+    
+    
 
     .highlight-button {
-        width: 100px;
-        background: rgba(80, 129, 251, 0.08);
+        @include pattern-button;
+        background-color: rgba($color: $color-dodger-blue, $alpha: .08);
         color: white;
-        border: none;
-        border-radius: 8px;
-        margin-top: 1em;
-        width: 100%;
-        padding: 1em 0;
+        margin-top: 1rem;
     }
 }
 
 
-.about-projects {
+.sidebar {
     width: 20%;
 
-    .new-project {
-        padding: 0 0 2em;
+    &__new-project {
+        padding: 0 0 2rem;
         width: 100%;
-    
-        h4 {
-            @include titles;
-        }
-    
+
         input, textarea {
-            @include input-pattern;
+            @include pattern-input;
             width: 100%;
-            margin-top: 1em;
+            margin-top: 1rem;
             box-sizing: border-box;
     
             &::placeholder {
                 @include input-placeholder-text;
             }
         }
-    
+        
         textarea{
             resize: none;
             height: 80px;
         }
     }
+    
+    &__title {
+        @include sidebar-title;
+    }
+    
 
-    .personalization {
-        padding: 0 0 2em;
+    &__personalization {
+        padding: 0 0 2rem;
         width: 100%;
 
-        h4 {
-            @include titles;
-        }
-
         select, input {
-            margin-top: 1em;
+            margin-top: 1rem;
         }
 
         select {
-            @include input-pattern;
+            @include pattern-input;
             color: rgba($color: white, $alpha: .64);
             width: 100%;
 
             option {
-                background-color: black;
+                @extend %background-code-editor;
             }
         }
 
         input {
             width: 100%;
-            border-radius: 4px;
             border: 1px white solid;
-            background-color: #051D3B;
             height: 40px;
             box-sizing: border-box;
+            @extend %pattern-border-radius;
+            @extend %background-deep-cove;
         }
     }
 
-    button {
-        width: 100%;
-        color: #051D3B;
-        height: 50px;
-        background-color: #5081FB;
-        border: none;
-        border-radius: 8px;
-        box-sizing: border-box;
+    &__save-button {
+        @include pattern-button;
+        color: $color-deep-cove;
+        @extend %background-dodger-blue;
     }
 }

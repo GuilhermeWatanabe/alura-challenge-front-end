@@ -1,17 +1,19 @@
 header {
     height: 56px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 2em auto;
+    margin: 2rem auto;
 
-    img {
-        width: 145px;
-        height: 34.05px;
+    .logo {
+        width: 20%;
+
+        img {
+            width: 145px;
+            height: 34.05px;
+        }
     }
 
-    #search-bar {
-        @include input-pattern;
+    .search-bar {
+        @include pattern-input;
         width: 55%;
         height: 100%;
 
@@ -20,20 +22,21 @@ header {
         }
     }
 
-    div {
+    .user {
         display: flex;
         align-items: center;
+        width: 20%;
 
         img {
-            height: 2em;
-            width: 2em;
+            height: 2rem;
+            width: 2rem;
             border-radius: 100%;
         }
 
         small {
+            @include fontSize(16px);
             color: white;
-            padding: 0 .5em;
-            font-size: 1em;
+            padding: 0 .5rem;
         }
     }
 }

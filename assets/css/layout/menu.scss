@@ -1,10 +1,9 @@
 nav {
-    width: 23%;
+    width: 20%;
     bottom: 100%;
-    font-family: Arial, Helvetica, sans-serif;    
 
     h4 {
-        @include titles;
+        @include sidebar-title;
     }
 
     ul {
@@ -14,7 +13,7 @@ nav {
         padding-inline-start: 0;
         
         li {
-            padding: 1em 1em 1em 0;
+            padding: 1rem 1rem 1rem 0;
             
             a {
                 text-decoration: none;
@@ -23,22 +22,22 @@ nav {
                 align-items: center;
 
                 div {
-                    width: 3em;
-                    height: 3em;
-                    border-radius: 1em;
+                    width: 3rem;
+                    height: 3rem;
+                    border-radius: 1rem;
                     float: left;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    margin-right: 1em;
+                    margin-right: 1rem;
                 }
         
                 .first-icon {
-                    background-color: #5081FB;
+                    @extend %background-dodger-blue;
                 }
         
                 .second-icon {
-                    background-color: rgba(80, 129, 251, 0.16);;
+                    background-color: rgba($color: $color-dodger-blue, $alpha: .16);
                 }
             }
         }

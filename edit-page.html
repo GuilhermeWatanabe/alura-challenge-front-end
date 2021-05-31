@@ -2,14 +2,19 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>Editor de Código</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img src="assets/images/logo.png" alt="Logo AluraDev" />
-        <input type="text" name="" id="search-bar" placeholder="Busque por algo">
-        <div>
+        <div class="logo">
+            <img src="assets/images/logo.svg" alt="Logo AluraDev" />
+        </div>
+        <input type="text" name="" id="" class="search-bar" placeholder="Busque por algo">
+        <div class="user">
             <img src="assets/images/user.jpeg" alt="Foto do usuário">
             <small>Guilherme</small>
         </div>
@@ -21,7 +26,7 @@
                 <li>
                     <a href="edit-page.html">
                         <div class="first-icon">
-                            <img src="assets/images/menu-icon1.png" alt="Icone do menu para a página de edição de código">
+                            <img src="assets/images/menu-icon1.svg" alt="Icone do menu para a página de edição de código">
                         </div>
                         Editor de código
                     </a>
@@ -29,7 +34,7 @@
                 <li>
                     <a href="">
                         <div class="second-icon">
-                            <img src="assets/images/menu-icon2.png" alt="Icone do menu para a página de comunidade">
+                            <img src="assets/images/menu-icon2.svg" alt="Icone do menu para a página de comunidade">
                         </div>
                         Comunidade
                     </a>
@@ -37,24 +42,24 @@
             </ul>
         </nav>
         <section class="code">
-            <div class="code-editor">
-                <ul class="dots">
-                    <li class="red"></li>
-                    <li class="yellow"></li>
-                    <li class="green"></li>
+            <div class="code__editor">
+                <ul class="code__dots">
+                    <li></li>
+                    <li></li>
+                    <li></li>
                 </ul>
-                <textarea name="" id=""></textarea>
+                <textarea name="" id="" class="code__text"></textarea>
              </div>
             <button class="highlight-button">Visualizar com o highlight</button>            
         </section>
-        <aside class="about-projects">
-            <div class="new-project">
-                <h4>Seu projeto</h4>
+        <aside class="sidebar">
+            <div class="sidebar__new-project">
+                <h4 class="sidebar__title">Seu projeto</h4>
                 <input type="text" name="" id="" placeholder="Nome do seu projeto">
                 <textarea name="" id="" placeholder="Descrição do seu projeto"></textarea>
             </div>
-            <div class="personalization">
-                <h4>Personalização</h4>
+            <div class="sidebar__personalization">
+                <h4 class="sidebar__title">Personalização</h4>
                 <select name="" id="">
                     <option value="">JavaScript</option>
                     <option value="">HTML</option>
@@ -62,7 +67,7 @@
                 </select>
                 <input type="color" name="" id="">
             </div>
-            <button>Salvar projeto</button>
+            <button class="sidebar__save-button">Salvar projeto</button>
         </aside>
     </main>
 </body>

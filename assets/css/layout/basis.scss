@@ -1,0 +1,13 @@
+body {
+    @include fontSize(16px);
+    line-height: calculateREM(24px);
+    @extend %font-inter;
+    @extend %background-deep-cove;
+}
+
+main, header {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
