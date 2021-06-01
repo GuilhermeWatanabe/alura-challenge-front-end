@@ -1,3 +1,6 @@
+/* lib imports */
+@use "sass:math";
+
 /* background colors */
 %background-light-malibu {background-color: #96B9FD;}
 %background-malibu {background-color: #7BA4FC;}
@@ -16,10 +19,25 @@
 /* functions */
 @function calculateREM($size) {
     //converts the given size in pixels to REM size
-    @return $size / 16px * 1rem;
+    @return math.div($size, 16px) * 1rem;
+}
+
+/* media queries mixins */
+
+@mixin for-phone-only {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-only {
+    @media screen and (max-width: 1024px ) {
+        @content;
+    }
 }
 
 /* mixins */
+
 @mixin pattern-input {
     background-color: rgba($color: white, $alpha: .16);
     border: none;
