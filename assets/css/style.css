@@ -2,29 +2,29 @@
 /* patern radius for borders */
 /* lib imports */
 /* background colors */
-.container .sidebar__save-button, nav ul li a .first-icon {
+.sidebar__save-button, nav ul li a .first-icon {
   background-color: #5081FB;
 }
 
-.container .sidebar__personalization input, body {
+.sidebar__personalization input, body {
   background-color: #051D3B;
 }
 
-.container .sidebar__personalization select option, .container .code__text, .container .code__dots {
+.sidebar__personalization select option, .code__text, .code__dots {
   background-color: #141414;
 }
 
 /* fonts */
-.container .sidebar__title, nav h4, body {
+.sidebar__title, nav h4, body {
   font-family: "Inter", sans-serif;
 }
 
 /* shadows */
-.container .code__text {
+.code__text {
   box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
 }
 
-.container .sidebar__save-button, .container .sidebar__personalization input, .container .sidebar__personalization select, .container .sidebar__new-project input, .container .sidebar__new-project textarea, .container .code .highlight-button, .container .code__editor, header .search-and-user .search-bar {
+.sidebar__save-button, .sidebar__personalization input, .sidebar__personalization select, .sidebar__new-project input, .sidebar__new-project textarea, .code .highlight-button, .code__editor, header .search-and-user .search-bar {
   border-radius: 8px;
 }
 
@@ -381,6 +381,29 @@ main {
   display: flex;
   justify-content: space-between;
 }
+main .container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 20%;
+}
+.user img {
+  height: 2em;
+  width: 2em;
+  border-radius: 100%;
+}
+.user small {
+  font-size: 1rem;
+  color: white;
+  padding: 0 0.5em;
+}
 
 header {
   height: 56px;
@@ -415,22 +438,6 @@ header .search-and-user .search-bar {
 header .search-and-user .search-bar::placeholder {
   color: white;
   opacity: 0.64;
-}
-header .search-and-user .user {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 20%;
-}
-header .search-and-user .user img {
-  height: 2em;
-  width: 2em;
-  border-radius: 100%;
-}
-header .search-and-user .user small {
-  font-size: 1rem;
-  color: white;
-  padding: 0 0.5em;
 }
 
 nav {
@@ -475,22 +482,17 @@ nav ul li a .second-icon {
   background-color: rgba(80, 129, 251, 0.16);
 }
 
-.container {
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-}
-.container .code {
+.code {
   width: 70%;
 }
-.container .code__editor {
+.code__editor {
   padding: 2rem;
   background-color: #6BD1FF;
   border: none;
   box-sizing: border-box;
   width: 100%;
 }
-.container .code__dots {
+.code__dots {
   margin-block-start: 0;
   margin-block-end: 0;
   width: 100%;
@@ -498,23 +500,23 @@ nav ul li a .second-icon {
   padding: 1rem;
   border-radius: 8px 8px 0 0;
 }
-.container .code__dots li {
+.code__dots li {
   width: 12px;
   height: 12px;
   border-radius: 50%;
   display: inline-block;
   margin-right: 3px;
 }
-.container .code__dots li:nth-child(1) {
+.code__dots li:nth-child(1) {
   background-color: #FF5F56;
 }
-.container .code__dots li:nth-child(2) {
+.code__dots li:nth-child(2) {
   background-color: #FFBD2E;
 }
-.container .code__dots li:nth-child(3) {
+.code__dots li:nth-child(3) {
   background-color: #27C93F;
 }
-.container .code__text {
+.code__text {
   width: 100%;
   resize: none;
   height: 250px;
@@ -525,7 +527,7 @@ nav ul li a .second-icon {
   padding: 1rem;
   border-radius: 0 0 8px 8px;
 }
-.container .code .highlight-button {
+.code .highlight-button {
   width: 100%;
   border: none;
   padding: 1rem 0;
@@ -533,14 +535,15 @@ nav ul li a .second-icon {
   color: white;
   margin-top: 1rem;
 }
-.container .sidebar {
+
+.sidebar {
   width: 25%;
 }
-.container .sidebar__new-project {
+.sidebar__new-project {
   padding: 0 0 2rem;
   width: 100%;
 }
-.container .sidebar__new-project input, .container .sidebar__new-project textarea {
+.sidebar__new-project input, .sidebar__new-project textarea {
   background-color: rgba(255, 255, 255, 0.16);
   border: none;
   padding: 1rem;
@@ -550,15 +553,15 @@ nav ul li a .second-icon {
   margin-top: 1rem;
   box-sizing: border-box;
 }
-.container .sidebar__new-project input::placeholder, .container .sidebar__new-project textarea::placeholder {
+.sidebar__new-project input::placeholder, .sidebar__new-project textarea::placeholder {
   color: white;
   opacity: 0.64;
 }
-.container .sidebar__new-project textarea {
+.sidebar__new-project textarea {
   resize: none;
   height: 80px;
 }
-.container .sidebar__title {
+.sidebar__title {
   font-size: 0.75rem;
   color: white;
   text-transform: uppercase;
@@ -567,14 +570,14 @@ nav ul li a .second-icon {
   margin-block-end: 0;
   line-height: 1.125rem;
 }
-.container .sidebar__personalization {
+.sidebar__personalization {
   padding: 0 0 2rem;
   width: 100%;
 }
-.container .sidebar__personalization select, .container .sidebar__personalization input {
+.sidebar__personalization select, .sidebar__personalization input {
   margin-top: 1rem;
 }
-.container .sidebar__personalization select {
+.sidebar__personalization select {
   background-color: rgba(255, 255, 255, 0.16);
   border: none;
   padding: 1rem;
@@ -583,17 +586,49 @@ nav ul li a .second-icon {
   color: rgba(255, 255, 255, 0.64);
   width: 100%;
 }
-.container .sidebar__personalization input {
+.sidebar__personalization input {
   width: 100%;
   border: 1px white solid;
   height: 40px;
   box-sizing: border-box;
 }
-.container .sidebar__save-button {
+.sidebar__save-button {
   width: 100%;
   border: none;
   padding: 1rem 0;
   color: #051D3B;
+}
+
+.project {
+  width: 49%;
+  background-color: rgba(0, 0, 0, 0.16);
+  border: 8px;
+  margin-bottom: 2em;
+}
+.project__info {
+  color: white;
+  padding: 1rem;
+}
+.project__title {
+  font-weight: 700;
+}
+.project__description {
+  opacity: 0.8;
+}
+.project .more {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+.project .status {
+  display: flex;
+}
+.project .status span {
+  padding: 1em;
+}
+.project .status__comments, .project .status__likes {
+  display: flex;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

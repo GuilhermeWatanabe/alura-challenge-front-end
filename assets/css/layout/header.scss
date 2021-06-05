@@ -33,23 +33,5 @@ header {
             }
         }
     
-        .user {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            width: 20%;
-    
-            img {
-                height: 2em;
-                width: 2em;
-                border-radius: 100%;
-            }
-    
-            small {
-                @include fontSize(16px);
-                color: white;
-                padding: 0 .5em;
-            }
-        }
     }
 }

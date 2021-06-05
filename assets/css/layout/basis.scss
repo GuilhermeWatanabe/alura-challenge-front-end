@@ -10,4 +10,30 @@ main {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+
+    .container {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 20%;
+
+    img {
+        height: 2em;
+        width: 2em;
+        border-radius: 100%;
+    }
+
+    small {
+        @include fontSize(16px);
+        color: white;
+        padding: 0 .5em;
+    }
 }
