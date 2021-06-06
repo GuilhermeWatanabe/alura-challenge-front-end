@@ -32,12 +32,16 @@ nav {
                     margin-right: 1rem;
                 }
         
-                .first-icon {
+                .active {
                     @extend %background-dodger-blue;
                 }
         
-                .second-icon {
+                .inactive {
                     background-color: rgba($color: $color-dodger-blue, $alpha: .16);
+
+                    &:hover {
+                        background-color: rgba($color: $color-dodger-blue, $alpha: .64);
+                    }
                 }
             }
         }

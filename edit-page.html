@@ -15,7 +15,7 @@
             <img src="assets/images/logo.svg" alt="Logo AluraDev" />
         </div>
         <div class="search-and-user">
-            <input type="text" name="" id="" class="search-bar" placeholder="Busque por algo">
+            <input type="text" name="" id="" class="search-bar" placeholder="Busque por algo" onfocus="this.placeholder=''" onblur="this.placeholder='Busque por algo'">
             <div class="user">
                 <img src="assets/images/user.jpeg" alt="Foto do usuário">
                 <small>Guilherme</small>
@@ -28,7 +28,7 @@
             <ul>
                 <li>
                     <a href="edit-page.html">
-                        <div class="first-icon">
+                        <div class="active">
                             <img src="assets/images/menu-icon1.svg" alt="Icone do menu para a página de edição de código">
                         </div>
                         Editor de código
@@ -36,7 +36,7 @@
                 </li>
                 <li>
                     <a href="community.html">
-                        <div class="second-icon">
+                        <div class="inactive">
                             <img src="assets/images/menu-icon2.svg" alt="Icone do menu para a página de comunidade">
                         </div>
                         Comunidade
@@ -46,21 +46,21 @@
         </nav>
         <div class="container">
             <section class="code">
-                <div class="code__editor">
-                    <ul class="code__dots">
+                <div class="editor">
+                    <ul class="editor__dots">
                         <li></li>
                         <li></li>
                         <li></li>
                     </ul>
-                    <textarea name="" id="" class="code__text"></textarea>
+                    <textarea name="" id="" class="editor__text"></textarea>
                 </div>
-                <button class="highlight-button">Visualizar com o highlight</button>            
+                <button class="button-outlined">Visualizar com o highlight</button>            
             </section>
             <aside class="sidebar">
                 <div class="sidebar__new-project">
                     <h4 class="sidebar__title">Seu projeto</h4>
-                    <input type="text" name="" id="" placeholder="Nome do seu projeto">
-                    <textarea name="" id="" placeholder="Descrição do seu projeto"></textarea>
+                    <input type="text" name="" id="" placeholder="Nome do seu projeto" onfocus="this.placeholder=''" onblur="this.placeholder='Nome do seu projeto'">
+                    <textarea name="" id="" placeholder="Descrição do seu projeto" onfocus="this.placeholder=''" onblur="this.placeholder='Descrição do seu projeto'"></textarea>
                 </div>
                 <div class="sidebar__personalization">
                     <h4 class="sidebar__title">Personalização</h4>
@@ -71,7 +71,7 @@
                     </select>
                     <input type="color" name="" id="">
                 </div>
-                <button class="sidebar__save-button">Salvar projeto</button>
+                <button class="button-filled">Salvar projeto</button>
             </aside>
         </div>
     </main>

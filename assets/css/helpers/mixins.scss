@@ -42,9 +42,12 @@
     background-color: rgba($color: white, $alpha: .16);
     border: none;
     padding: 1rem;
-    box-sizing: border-box;
     color: white;
     @extend %pattern-border-radius;
+
+    &:hover {
+        @include input-hover-effect;
+    }
 }
 
 @mixin input-placeholder-text {
@@ -66,7 +69,9 @@
 @mixin pattern-button {
     width: 100%;
     border: none;
-    padding: 1rem 0;
+    height: 56px;
+    padding: 0;
+    cursor: pointer;
     @extend %pattern-border-radius;
 }
 
@@ -77,4 +82,8 @@
 
 @mixin fontSize($size) {
     font-size: calculateREM($size);
+}
+
+@mixin input-hover-effect {
+    background-color: rgba($color: #FFF, $alpha: .24);
 }

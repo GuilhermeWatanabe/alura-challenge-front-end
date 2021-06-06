@@ -22,7 +22,6 @@ header {
         display: flex;
         justify-content: space-between;
 
-
         .search-bar {
             @include pattern-input;
             width: 70%;
