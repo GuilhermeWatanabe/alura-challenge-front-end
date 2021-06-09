@@ -2,6 +2,10 @@ nav {
     width: 15%;
     bottom: 100%;
 
+    @include for-tablet-only {
+        display: none;
+    }
+
     h4 {
         @include sidebar-title;
     }

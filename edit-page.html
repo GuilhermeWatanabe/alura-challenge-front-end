@@ -16,9 +16,13 @@
         </div>
         <div class="search-and-user">
             <input type="text" name="" id="" class="search-bar" placeholder="Busque por algo" onfocus="this.placeholder=''" onblur="this.placeholder='Busque por algo'">
+            <img src="assets/images/search-icon.svg" alt="Icone de busca" class="search-icon">
             <div class="user">
                 <img src="assets/images/user.jpeg" alt="Foto do usuário">
                 <small>Guilherme</small>
+            </div>
+            <div class="menu-icon">
+                <img src="assets/images/hamburguer-menu.svg" alt="Icone do menu." class="hamburguer-icon">
             </div>
         </div>
     </header>
@@ -57,19 +61,19 @@
                 <button class="button-outlined">Visualizar com o highlight</button>            
             </section>
             <aside class="sidebar">
+                <h4 class="sidebar__title">Seu projeto</h4>
                 <div class="sidebar__new-project">
-                    <h4 class="sidebar__title">Seu projeto</h4>
                     <input type="text" name="" id="" placeholder="Nome do seu projeto" onfocus="this.placeholder=''" onblur="this.placeholder='Nome do seu projeto'">
                     <textarea name="" id="" placeholder="Descrição do seu projeto" onfocus="this.placeholder=''" onblur="this.placeholder='Descrição do seu projeto'"></textarea>
                 </div>
+                <h4 class="sidebar__title">Personalização</h4>
                 <div class="sidebar__personalization">
-                    <h4 class="sidebar__title">Personalização</h4>
-                    <select name="" id="">
+                    <select name="" id="" class="languages-select">
                         <option value="">JavaScript</option>
                         <option value="">HTML</option>
                         <option value="">CSS</option>
                     </select>
-                    <input type="color" name="" id="">
+                    <input type="color" name="" id="" class="color-piker">
                 </div>
                 <button class="button-filled">Salvar projeto</button>
             </aside>

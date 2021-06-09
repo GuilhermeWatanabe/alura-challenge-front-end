@@ -10,11 +10,11 @@ nav ul li a .active, .button-filled {
   background-color: #5081FB;
 }
 
-.sidebar__personalization input, body {
+.sidebar__personalization .color-piker, body {
   background-color: #051D3B;
 }
 
-.sidebar__personalization select option, .editor__text, .editor__dots {
+.sidebar__personalization .languages-select option, .editor__text, .editor__dots {
   background-color: #141414;
 }
 
@@ -28,7 +28,7 @@ nav ul li a .active, .button-filled {
   box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
 }
 
-.sidebar__personalization input, .sidebar__personalization select, .sidebar__new-project input, .sidebar__new-project textarea, header .search-and-user .search-bar, .button-filled, .button-outlined, .editor, .user {
+.sidebar__personalization .color-piker, .sidebar__personalization .languages-select, .sidebar__new-project input, .sidebar__new-project textarea, header .search-and-user .search-bar, .button-filled, .button-outlined, .editor, .user {
   border-radius: 8px;
 }
 
@@ -391,6 +391,12 @@ main .container {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 1024px) {
+  main .container {
+    flex-direction: column;
+    width: 100%;
+  }
+}
 
 .user {
   display: flex;
@@ -465,7 +471,7 @@ main .container {
   cursor: pointer;
   background-color: rgba(80, 129, 251, 0.08);
   color: white;
-  margin-top: 1em;
+  margin: 2em 0;
 }
 .button-outlined:hover {
   background-color: rgba(80, 129, 251, 0.16);
@@ -473,6 +479,10 @@ main .container {
 .button-outlined:active {
   border: 4px solid;
   border-color: rgba(80, 129, 251, 0.24);
+}
+.button-outlined:after {
+  background-color: rgba(80, 129, 251, 0.24);
+  transition: 0s;
 }
 
 .button-filled {
@@ -482,6 +492,7 @@ main .container {
   padding: 0;
   cursor: pointer;
   color: #051D3B;
+  margin: 2em 0;
 }
 .button-filled:active {
   border: 4px solid;
@@ -503,6 +514,8 @@ header {
 }
 header .logo {
   width: 15%;
+  display: flex;
+  align-items: center;
 }
 header .logo img {
   width: 145px;
@@ -512,6 +525,16 @@ header .search-and-user {
   width: 80%;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 1024px) {
+  header .search-and-user {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .search-and-user {
+    justify-content: flex-end;
+  }
 }
 header .search-and-user .search-bar {
   background-color: rgba(255, 255, 255, 0.16);
@@ -524,14 +547,60 @@ header .search-and-user .search-bar {
 header .search-and-user .search-bar:hover {
   background-color: rgba(255, 255, 255, 0.24);
 }
+@media screen and (max-width: 768px) {
+  header .search-and-user .search-bar {
+    display: none;
+  }
+}
 header .search-and-user .search-bar::placeholder {
   color: white;
   opacity: 0.64;
+}
+@media screen and (max-width: 1024px) {
+  header .search-and-user .user {
+    display: none;
+  }
+}
+header .search-and-user .search-icon {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  header .search-and-user .search-icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 1em;
+    padding: 15.25px 14px;
+    box-sizing: border-box;
+  }
+}
+header .search-and-user .menu-icon {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  header .search-and-user .menu-icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 1em;
+    padding: 15.25px 14px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header .search-and-user .menu-icon .hamburguer-icon {
+    display: block;
+  }
 }
 
 nav {
   width: 15%;
   bottom: 100%;
+}
+@media screen and (max-width: 1024px) {
+  nav {
+    display: none;
+  }
 }
 nav h4 {
   font-size: 0.75rem;
@@ -541,6 +610,7 @@ nav h4 {
   margin-block-start: 0;
   margin-block-end: 0;
   line-height: 1.125rem;
+  padding: 0 0 1em;
 }
 nav ul {
   list-style-type: none;
@@ -577,9 +647,29 @@ nav ul li a .inactive:hover {
 .code {
   width: 70%;
 }
+@media screen and (max-width: 1024px) {
+  .code {
+    width: 100%;
+  }
+}
 
 .sidebar {
   width: 25%;
+}
+@media screen and (max-width: 1024px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+.sidebar__title {
+  font-size: 0.75rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  line-height: 1.125rem;
+  padding: 0 0 1em;
 }
 .sidebar__new-project {
   padding: 0 0 2rem;
@@ -601,42 +691,68 @@ nav ul li a .inactive:hover {
   color: white;
   opacity: 0.64;
 }
+@media screen and (max-width: 1024px) {
+  .sidebar__new-project input, .sidebar__new-project textarea {
+    width: 100%;
+  }
+}
 .sidebar__new-project textarea {
   resize: none;
   height: 80px;
 }
-.sidebar__title {
-  font-size: 0.75rem;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 0.25rem;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  line-height: 1.125rem;
-}
 .sidebar__personalization {
-  padding: 0 0 2rem;
   width: 100%;
 }
-.sidebar__personalization select, .sidebar__personalization input {
-  margin-top: 1rem;
+@media screen and (max-width: 1024px) {
+  .sidebar__personalization {
+    display: flex;
+    justify-content: space-between;
+  }
 }
-.sidebar__personalization select {
+@media screen and (max-width: 768px) {
+  .sidebar__personalization {
+    flex-direction: column;
+  }
+}
+.sidebar__personalization .languages-select {
   background-color: rgba(255, 255, 255, 0.16);
   border: none;
   padding: 1rem;
   color: white;
   color: rgba(255, 255, 255, 0.64);
   width: 100%;
+  height: 56px;
+  margin-top: 1em;
 }
-.sidebar__personalization select:hover {
+.sidebar__personalization .languages-select:hover {
   background-color: rgba(255, 255, 255, 0.24);
 }
-.sidebar__personalization input {
+@media screen and (max-width: 1024px) {
+  .sidebar__personalization .languages-select {
+    width: 49%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sidebar__personalization .languages-select {
+    width: 100%;
+  }
+}
+.sidebar__personalization .color-piker {
   width: 100%;
   border: 1px white solid;
-  height: 40px;
+  height: 56px;
   box-sizing: border-box;
+  margin-top: 1em;
+}
+@media screen and (max-width: 1024px) {
+  .sidebar__personalization .color-piker {
+    width: 49%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sidebar__personalization .color-piker {
+    width: 100%;
+  }
 }
 
 .project {
@@ -644,6 +760,11 @@ nav ul li a .inactive:hover {
   background-color: rgba(0, 0, 0, 0.16);
   border-radius: 8px;
   margin-bottom: 2em;
+}
+@media screen and (max-width: 1024px) {
+  .project {
+    width: 100%;
+  }
 }
 .project__info {
   color: white;

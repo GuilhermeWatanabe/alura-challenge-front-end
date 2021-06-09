@@ -4,6 +4,10 @@
     border-radius: $pattern-radius;
     margin-bottom: 2em;
 
+    @include for-tablet-only {
+        width: 100%;
+    }
+
     &__info {
         color: white;
         padding: 1.5rem;

@@ -16,6 +16,11 @@ main {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+
+        @include for-tablet-only {
+            flex-direction: column;
+            width: 100%;
+        }
     }
 }
 
@@ -103,7 +108,7 @@ main {
     @include pattern-button;
     background-color: rgba($color: $color-dodger-blue, $alpha: .08);
     color: white;
-    margin-top: 1em;
+    margin: 2em 0;
 
     &:hover {
         background-color: rgba($color: $color-dodger-blue, $alpha: .16);
@@ -114,12 +119,17 @@ main {
         border-color: rgba($color: $color-dodger-blue, $alpha: .24);
     }
 
+    &:after {
+        background-color: rgba($color: $color-dodger-blue, $alpha: .24);
+        transition: 0s;
+    }
 }
 
 .button-filled {
     @include pattern-button;
     color: $color-deep-cove;
     @extend %background-dodger-blue;
+    margin: 2em 0;
 
     &:hover {
         @extend %background-malibu;

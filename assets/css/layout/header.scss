@@ -7,9 +7,10 @@ header {
     display: flex;
     justify-content: space-between;
 
-
     .logo {
         width: 15%;
+        display: flex;
+        align-items: center;
 
         img {
             width: 145px;
@@ -22,15 +23,65 @@ header {
         display: flex;
         justify-content: space-between;
 
+        @include for-tablet-only {
+            align-items: center;
+        }
+
+        @include for-phone-only {
+            justify-content: flex-end;
+        }
+
         .search-bar {
             @include pattern-input;
             width: 70%;
             height: 100%;
     
+            @include for-phone-only {
+                display: none;
+            }
+
             &::placeholder {
                 @include input-placeholder-text;
             }
         }
+
+        .user {
+            @include for-tablet-only {
+                display: none;
+            }
+        }
+
+        .search-icon {
+            display: none;
+
+            @include for-phone-only {
+                display: block;
+                width: 48px;
+                height: 48px;
+                border-radius: 1em;
+                padding: 15.25px 14px;
+                box-sizing: border-box;
+            }
+        }
+        
+        .menu-icon {
+            display: none;
+
+            @include for-tablet-only {
+                display: block;
+                width: 48px;
+                height: 48px;
+                border-radius: 1em;
+                padding: 15.25px 14px;
+                box-sizing: border-box;
+            }
+
+            .hamburguer-icon {
     
+                @include for-tablet-only {
+                    display: block;
+                }
+            }
+        }
     }
 }
