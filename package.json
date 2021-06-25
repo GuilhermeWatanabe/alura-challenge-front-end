@@ -1,0 +1,27 @@
+{
+  "name": "alura-challenge-front-end",
+  "version": "1.0.0",
+  "description": "Alura's challenge project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc",
+    "watch": "tsc -w",
+    "server": "lite-server --baseDir=dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuilhermeWatanabe/alura-challenge-front-end.git"
+  },
+  "author": "Guilherme Watanabe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuilhermeWatanabe/alura-challenge-front-end/issues"
+  },
+  "homepage": "https://github.com/GuilhermeWatanabe/alura-challenge-front-end#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "typescript": "^4.3.4"
+  }
+}
