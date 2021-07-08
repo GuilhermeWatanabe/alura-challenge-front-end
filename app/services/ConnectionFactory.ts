@@ -3,16 +3,16 @@ var close: any = null;
 
 export class Connectionfactory {
 
-    static getConnection() {
+    static getConnection(): Promise<IDBDatabase> {
         return new Promise((resolve, reject) => {
-            let openRequest = window.indexedDB.open('alura', 1);
+            let openRequest = window.indexedDB.open('projects', 1);
 
             openRequest.onupgradeneeded = e => {
-                if(openRequest.result.objectStoreNames.contains('alura')) {
-                    openRequest.result.deleteObjectStore('alura');
+                if(openRequest.result.objectStoreNames.contains('projects')) {
+                    openRequest.result.deleteObjectStore('projects');
                 }
 
-                openRequest.result.createObjectStore('alura', {autoIncrement: true});
+                openRequest.result.createObjectStore('projects', {autoIncrement: true});
             }
 
             openRequest.onsuccess = e => {
