@@ -2,8 +2,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { GlobalStyle } from "./components/GlobalStyle";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
-import CodeEditor from "./pages/CodeEditor";
 import Community from "./pages/Community";
+import Editor from "./pages/Editor";
 
 const App = () => {
     return (
@@ -13,10 +13,10 @@ const App = () => {
             <Menu />
             <Switch>
                 <Route exact path="/">
-                    <Community />
+                    <Editor />
                 </Route>
                 <Route path="/editor">
-                    <CodeEditor />
+                    <Community />
                 </Route>
             </Switch>
         </BrowserRouter>
