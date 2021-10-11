@@ -357,7 +357,7 @@ export const GlobalStyle = createGlobalStyle`
 
     #root {
         color: white;
-        font-family: 'Inter', sans-serif;;
+        font-family: 'Inter', sans-serif;
         margin: 1.5em auto 0;
         width: 97%;
     }

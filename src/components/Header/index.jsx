@@ -9,6 +9,7 @@ const Header = styled.header`
     display: flex;
     height: auto;
     justify-content: space-between;
+    margin-bottom: 40px;
     width: 100%;
 `;
 
@@ -43,6 +44,7 @@ const User = styled.div`
     display: flex;
     height: 56px;
     padding: 0 0.5em;
+    transition: 0.25s;
 
     &:hover {
         ${hoverFormComponentColor}

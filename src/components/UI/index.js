@@ -14,7 +14,7 @@ export const bodyText = css`
     line-height: 24px;
 `;
 
-export const sidebarTitle = css`
+const sidebarTitleSize = css`
     font-size: 12px;
     line-height: 18px;
 `;
@@ -33,14 +33,20 @@ export const baseShadow = css`
 
 export const normalFormComponentColor = css`
     background-color: rgba(255, 255, 255, 0.16);
-    transition: 0.3s;
+    transition: 0.25s;
 `;
 
 export const hoverFormComponentColor = css`
     background-color: rgba(255, 255, 255, 0.24);
-    transition: 0.3s;
 `;
 
 /**
  * Others
  */
+
+export const SideBarTitle = styled.span`
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+
+    ${sidebarTitleSize}
+`;
