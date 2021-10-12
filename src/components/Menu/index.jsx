@@ -6,7 +6,7 @@ import icon2 from "../../assets/images/menu-icon2.svg";
 import { SideBarTitle } from "../UI";
 
 const Menu = styled.nav`
-    display: inline-block;
+    float: left;
     height: calc(100vh - 120px);
     width: 25%;
 
