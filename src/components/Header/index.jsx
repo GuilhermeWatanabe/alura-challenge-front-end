@@ -47,13 +47,13 @@ const User = styled.div`
     transition: 0.25s;
 
     &:hover {
-        ${hoverFormComponentColor}
+        background-color: rgba(255, 255, 255, 0.08);
     }
 
     img {
         border-radius: 100%;
         height: 32px;
-        padding-right: 0.5em;
+        padding-right: 8px;
         width: 32px;
     }
 `;
