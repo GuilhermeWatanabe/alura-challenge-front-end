@@ -54,7 +54,7 @@ export const SideBarTitle = styled.span`
 
 export const FilledButton = styled.button`
     background-color: ${blue300};
-    border: 0;
+    border: none;
     border-radius: ${baseRadius};
     box-sizing: border-box;
     color: #051D3B;
@@ -78,7 +78,7 @@ export const FilledButton = styled.button`
 
 export const OutlinedButton = styled.button`
     background-color: rgba(${blue300RGB}, 0.08);
-    border: 0;
+    border: none;
     border-radius: ${baseRadius};
     box-sizing: border-box;
     color: white;

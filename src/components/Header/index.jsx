@@ -51,9 +51,9 @@ const User = styled.div`
     }
 
     img {
-        border-radius: 100%;
+        border-radius: 50%;
         height: 32px;
-        padding-right: 8px;
+        margin-right: 8px;
         width: 32px;
     }
 `;
